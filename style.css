@@ -1,0 +1,135 @@
+/* ============================================
+   RANDOM QUOTE GENERATOR - Stylesheet
+   ============================================ */
+
+/* RESET AND BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #ffffff;
+}
+
+/* CONTAINER STYLES */
+.container {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* TITLE STYLES */
+.title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #e0e0e0;
+}
+
+/* QUOTE BOX STYLES (Glassmorphism card) */
+.quote-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* QUOTE TEXT STYLES */
+.quote-text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* AUTHOR STYLES */
+.quote-author {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* BUTTON STYLES */
+.btn {
+    padding: 14px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* BONUS: FADE-IN ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* RESPONSIVE DESIGN - MOBILE PHONES */
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+
+    .quote-box {
+        padding: 30px 20px;
+    }
+
+    .quote-text {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        min-height: 60px;
+    }
+
+    .quote-author {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+}
